@@ -1,0 +1,230 @@
+@import "../../global.scss";
+
+.menu {
+	.hero {
+		position: relative;
+		background-color: #171a29;
+		padding: 40px 40px 50px 40px;
+		color: white;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include mobile {
+			padding: 20px;
+		}
+		.hero_left {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				height: 165px;
+				width: 254px;
+				margin-right: 40px;
+				@include mobile {
+					height: 100px;
+					width: 100px;
+				}
+			}
+			.restraunt_details {
+				h1 {
+					font-size: 30px;
+					font-weight: 400;
+					margin-bottom: 5px;
+					@include mobile {
+						font-size: 15px;
+					}
+				}
+				p,
+				.location,
+				.location_details {
+					margin-bottom: 5px;
+					font-weight: 300;
+					color: lightgray;
+					font-size: 13px;
+					@include mobile {
+						font-size: 10px;
+					}
+				}
+				.further_details {
+					margin-top: 10px;
+					display: flex;
+					align-items: center;
+
+					div {
+						margin: 0 20px 0 0;
+						span {
+							font-weight: 600;
+							font-size: 15px;
+							@include mobile {
+								font-size: 10px;
+							}
+						}
+						p {
+							font-size: 12px;
+							color: lightgray;
+							@include mobile {
+								font-size: 10px;
+							}
+						}
+					}
+					.line {
+						height: 40px;
+						width: 1px;
+						background-color: rgba(128, 128, 128, 0.589);
+						@include mobile {
+							height: 25px;
+						}
+					}
+				}
+			}
+		}
+		.hero_right {
+			position: relative;
+			h3 {
+				position: absolute;
+				top: -10px;
+				background-color: #171a29;
+				padding: 0 5px;
+			}
+			.hero_right_content {
+				border: 1px solid lightgray;
+				padding: 20px;
+				@include mobile {
+					padding: 10px;
+				}
+				div {
+					display: flex;
+					align-items: center;
+					margin: 10px 0;
+					i {
+						margin-right: 10px;
+						font-size: 13px;
+						background-color: white;
+						border-radius: 50%;
+						height: 30px;
+						width: 30px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						color: #171a29;
+						@include mobile {
+							height: 20px;
+							width: 20px;
+						}
+					}
+					p {
+						font-size: 14px;
+						color: lightgray;
+						@include mobile {
+							font-size: 10px;
+						}
+					}
+				}
+			}
+		}
+		.category {
+			position: absolute;
+			display: flex;
+			bottom: -16px;
+			left: 50%;
+
+			transform: translate(-50%);
+			input {
+				outline: none;
+				padding: 7px 10px;
+				width: 220px;
+				border: none;
+				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+				margin-right: 10px;
+				::placeholder {
+					color: lightgray;
+					font-size: 13px;
+					font-weight: 600;
+				}
+			}
+			div {
+				margin: 0 10px;
+				background-color: white;
+				color: rgb(128, 128, 128);
+				display: flex;
+				align-items: center;
+				padding: 3px 15px;
+
+				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+				font-size: 13px;
+				i {
+					font-size: 15px;
+					margin-right: 10px;
+				}
+			}
+			.category_hover {
+				&:hover {
+					color: red;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.main_menu {
+		background-color: white;
+		display: flex;
+		width: inherit;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 30px 0;
+		@include mobile {
+			padding: 10px 0;
+		}
+		.left_menu {
+			text-align: right;
+			border-right: 2px solid lightgray;
+			min-height: 400px;
+			padding-right: 20px;
+			@include mobile {
+				padding-right: 10px;
+			}
+
+			ul {
+				li {
+					margin: 20px 0;
+					cursor: pointer;
+					@include mobile {
+						margin: 10px 0;
+						font-size: 12px;
+					}
+					&:hover {
+						color: $mainColor;
+					}
+				}
+			}
+		}
+		.mid_menu {
+			padding: 40px;
+			@include mobile {
+				padding: 20px;
+			}
+			h1 {
+				font-weight: 600;
+				font-size: 25px;
+				@include mobile {
+					font-size: 15px;
+				}
+			}
+			p {
+				font-size: 13px;
+				margin-bottom: 20px;
+				@include mobile {
+					font-size: 10px;
+					margin-bottom: 10px;
+				}
+			}
+			.items {
+				padding: 0 40px 0;
+				@include mobile {
+					padding: 0 10px 0;
+				}
+			}
+		}
+	}
+}

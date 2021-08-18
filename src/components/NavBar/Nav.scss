@@ -1,0 +1,80 @@
+@import "../../global.scss";
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	background-color: white;
+	.left {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			height: 60px;
+			width: 60px;
+			object-fit: contain;
+			margin: 0 20px;
+			@include mobile {
+				height: 30px;
+				width: 30px;
+				margin: 0 10px;
+			}
+		}
+		.location {
+			margin: 0 10px;
+			font-weight: bold;
+			border-bottom: 2px solid black;
+			@include mobile {
+				margin: 0 4px;
+			}
+		}
+		.location_details {
+			font-weight: 200;
+			font-size: 14px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include mobile {
+				font-size: 10px;
+			}
+			span {
+				i {
+					color: orange;
+					margin-top: 7px;
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+	.right {
+		span {
+			margin: 0 30px;
+			font-size: 15px;
+			font-weight: 400;
+			@include mobile {
+				font-size: 12px;
+				margin: 0 5px;
+			}
+			&:hover {
+				color: $mainColor;
+				cursor: pointer;
+				.cart_count {
+					background-color: $mainColor;
+					color: white;
+				}
+			}
+			i {
+				margin: 0 10px;
+				@include mobile {
+					margin: 0 4px;
+				}
+			}
+			.cart_count {
+				padding: 3px 10px;
+				margin-right: 2px;
+				border-radius: 50%;
+				background-color: lightgreen;
+			}
+		}
+	}
+}
